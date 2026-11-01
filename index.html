@@ -143,13 +143,13 @@
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 3rem 2rem;
+            padding: 1.5rem 2rem; /* Reducido para acercar las secciones */
         }
 
         section h2 {
             text-align: center;
             font-size: 2rem;
-            margin-bottom: 2.5rem;
+            margin-bottom: 2rem; /* Reducido el espacio debajo de los títulos */
             color: var(--excel-dark-green);
         }
 
@@ -184,7 +184,7 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
-            margin-bottom: 1.5rem;
+            margin-bottom: 0.5rem; /* Reducido al mínimo para eliminar el espacio en blanco */
         }
 
         .service-card {
@@ -303,6 +303,77 @@
             transform: translateY(-2px);
         }
 
+        /* --- NUEVA SECCIÓN DE TESTIMONIOS --- */
+        .testimonials-section {
+            margin-top: 3.5rem;
+            padding: 1rem 0;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            background-color: var(--white);
+            padding: 2rem;
+            border-radius: 10px;
+            border: 1px solid #e0e0e0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .stars {
+            color: #ffb400;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-text {
+            color: #555;
+            font-style: italic;
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .client-info {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .client-avatar {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background-color: var(--excel-light-green);
+            color: var(--excel-dark-green);
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+        }
+
+        .client-details h4 {
+            font-size: 1rem;
+            color: var(--text-dark);
+        }
+
+        .client-details span {
+            font-size: 0.85rem;
+            color: #777;
+        }
+
         /* Tarjeta Profesional de YouTube con Logo Integrado */
         .youtube-section {
             background: linear-gradient(135deg, #ffffff 0%, #fcfcfc 100%);
@@ -335,8 +406,8 @@
         }
 
         .youtube-avatar-img {
-            width: 100px;
-            height: 100px;
+            width: 75px;
+            height: 75px;
             border-radius: 50%;
             object-fit: cover;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
@@ -412,6 +483,91 @@
             background-color: var(--youtube-dark-red);
             transform: translateY(-2px);
             box-shadow: 0 6px 16px rgba(255, 0, 0, 0.4);
+        }
+
+        /* --- NUEVA SECCIÓN DE CONTACTO --- */
+        .contact-section {
+            margin-top: 3.5rem;
+            padding: 3rem 2rem;
+            background-color: var(--white);
+            border-radius: 12px;
+            border: 1px solid #e0e0e0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+            text-align: center;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 800px;
+            margin: 2rem auto 0 auto;
+        }
+
+        .contact-card {
+            padding: 2rem;
+            border-radius: 10px;
+            background-color: var(--bg-light);
+            border: 1px solid #e5e5e5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            transition: transform 0.3s ease;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .contact-icon {
+            font-size: 2.5rem;
+        }
+
+        .contact-card h3 {
+            color: var(--excel-dark-green);
+            font-size: 1.2rem;
+        }
+
+        .contact-card p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .btn-whatsapp-contact {
+            background-color: #25d366;
+            color: var(--white);
+            padding: 0.7rem 1.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.95rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-whatsapp-contact:hover {
+            background-color: #1eb954;
+        }
+
+        .btn-email-contact {
+            background-color: var(--excel-green);
+            color: var(--white);
+            padding: 0.7rem 1.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.95rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-email-contact:hover {
+            background-color: var(--excel-dark-green);
         }
 
         footer {
@@ -522,7 +678,6 @@
                     <li><a href="#inicio">Inicio</a></li>
                     <li><a href="#servicios">Servicios</a></li>
                     <li><a href="#plantillas">Plantillas</a></li>
-                    <li><a href="#youtube">Canal</a></li>
                     <li><a href="#contacto">Contacto</a></li>
                 </ul>
             </nav>
@@ -535,7 +690,6 @@
             <a href="#inicio" onclick="closeOrbitalMenu()">Inicio</a>
             <a href="#servicios" onclick="closeOrbitalMenu()">Servicios</a>
             <a href="#plantillas" onclick="closeOrbitalMenu()">Plantillas</a>
-            <a href="#youtube" onclick="closeOrbitalMenu()">Canal</a>
             <a href="#contacto" onclick="closeOrbitalMenu()">Contacto</a>
         </div>
         <button class="orbital-btn" id="orbitalBtn" aria-label="Abrir menú de navegación">☰</button>
@@ -614,6 +768,51 @@
             </div>
         </div>
 
+        <!-- 1. NUEVA SECCIÓN: TESTIMONIOS (Antes de YouTube) -->
+        <div id="testimonios" class="testimonials-section">
+            <h2>Lo que dicen nuestros clientes</h2>
+            <div class="testimonials-grid">
+                <!-- Testimonio 1 -->
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"La plantilla de control financiero cambió por completo la organización de mi negocio. Excelente atención y explicaciones claras en los videos."</p>
+                    <div class="client-info">
+                        <div class="client-avatar">CR</div>
+                        <div class="client-details">
+                            <h4>Carlos Rodríguez</h4>
+                            <span>Gerente de PYME</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonio 2 -->
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"La macro automatizada que desarrollamos redujo nuestro tiempo de facturación de 4 horas a solo 10 minutos. Totalmente recomendado."</p>
+                    <div class="client-info">
+                        <div class="client-avatar">MP</div>
+                        <div class="client-details">
+                            <h4>María Pérez</h4>
+                            <span>Directora de Operaciones</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonio 3 -->
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Las clases particulares valieron 100% la pena. Aprendí a usar fórmulas avanzadas y tablas dinámicas sin complicaciones."</p>
+                    <div class="client-info">
+                        <div class="client-avatar">JL</div>
+                        <div class="client-details">
+                            <h4>José López</h4>
+                            <span>Analista Contable</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- Sección Profesional: Canal de YouTube con Logo Integrado -->
         <div id="youtube" class="youtube-section">
             <div class="youtube-card">
@@ -629,6 +828,34 @@
                 <a href="https://www.youtube.com/@emprendeconexceloficial" target="_blank" rel="noopener" class="btn-youtube">
                     🔴 Visitar Canal de YouTube
                 </a>
+            </div>
+        </div>
+
+        <!-- 2. NUEVA SECCIÓN: CONTACTO (Después de YouTube) -->
+        <!-- NUEVA SECCIÓN: CONTACTO -->
+        <div id="contacto-directo" class="contact-section">
+            <h2>¿Tienes un proyecto en mente? Contáctanos</h2>
+            <p>Estamos listos para ayudarte a optimizar tus hojas de cálculo o desarrollar la herramienta en Excel que tu negocio necesita.</p>
+            <div class="contact-grid">
+                <!-- Tarjeta WhatsApp -->
+                <div class="contact-card">
+                    <div class="contact-icon">💬</div>
+                    <h3>Atención Rápida por WhatsApp</h3>
+                    <p>Respuesta inmediata para consultas, cotizaciones de plantillas o agenda de clases.</p>
+                    <a href="https://wa.me/584262991927" target="_blank" rel="noopener" class="btn-whatsapp-contact">
+                        Enviar mensaje por WhatsApp
+                    </a>
+                </div>
+
+                <!-- Tarjeta Email (Modificada) -->
+                <div class="contact-card">
+                    <div class="contact-icon">✉️</div>
+                    <h3>Correo Electrónico</h3>
+                    <p>Envíanos los detalles de tu proyecto o requerimientos específicos para una propuesta formal.</p>
+                    <a href="mailto:uterreyn@gmail.com" style="color: var(--excel-green); font-weight: bold; text-decoration: none; font-size: 1.05rem;">
+                        uterreyn@gmail.com
+                    </a>
+                </div>
             </div>
         </div>
     </section>
