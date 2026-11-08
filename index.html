@@ -143,13 +143,13 @@
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 1.5rem 2rem; /* Reducido para acercar las secciones */
+            padding: 1.5rem 2rem;
         }
 
         section h2 {
             text-align: center;
             font-size: 2rem;
-            margin-bottom: 2rem; /* Reducido el espacio debajo de los títulos */
+            margin-bottom: 2rem;
             color: var(--excel-dark-green);
         }
 
@@ -184,7 +184,7 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
-            margin-bottom: 0.5rem; /* Reducido al mínimo para eliminar el espacio en blanco */
+            margin-bottom: 0.5rem;
         }
 
         .service-card {
@@ -228,11 +228,17 @@
             font-size: 0.95rem;
         }
 
-        /* Plantillas Section */
+        /* Plantillas Section - Modificado a 2 columnas */
         .templates-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .templates-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
         .template-card {
@@ -251,14 +257,22 @@
             transform: translateY(-5px);
         }
 
-        .template-img {
-            height: 180px;
-            background-color: #ddd;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #666;
-            font-weight: bold;
+        /* Contenedor Adaptable para Videos de YouTube */
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* Proporción 16:9 estándar de YouTube */
+            height: 0;
+            background-color: #000;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
         }
 
         .template-info {
@@ -303,7 +317,7 @@
             transform: translateY(-2px);
         }
 
-        /* --- NUEVA SECCIÓN DE TESTIMONIOS --- */
+        /* --- SECCIÓN DE TESTIMONIOS --- */
         .testimonials-section {
             margin-top: 3.5rem;
             padding: 1rem 0;
@@ -406,8 +420,8 @@
         }
 
         .youtube-avatar-img {
-            width: 75px;
-            height: 75px;
+            width: 100px;
+            height: 100px;
             border-radius: 50%;
             object-fit: cover;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
@@ -485,7 +499,7 @@
             box-shadow: 0 6px 16px rgba(255, 0, 0, 0.4);
         }
 
-        /* --- NUEVA SECCIÓN DE CONTACTO --- */
+        /* --- SECCIÓN DE CONTACTO --- */
         .contact-section {
             margin-top: 3.5rem;
             padding: 3rem 2rem;
@@ -733,42 +747,84 @@
         </div>
     </section>
 
-    <!-- Templates Section -->
+    <!-- Templates Section (2 Columnas, 6 Plantillas con Videos de YouTube) -->
     <section id="plantillas" class="container">
-        <h2>Plantillas de Excel Descargables</h2>
+        <h2>Plantillas de Excel Premium</h2>
         <div class="templates-grid">
             <!-- Plantilla 1 -->
             <div class="template-card">
-                <div class="template-img">[ Imagen 800x500px ]</div>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/Rm2w14nCIsw?si=86D_rrlP8FX24kAg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
                 <div class="template-info">
                     <h3>Plantilla de Control Financiero</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Detalle completo de la plantilla y fórmulas.</p>
-                    <a href="https://www.youtube.com" target="_blank" rel="noopener" class="btn-video">▶ Ver Video</a>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
+                    <a href="https://www.youtube.com/@emprendeconexceloficial" target="_blank" rel="noopener" class="btn-video">▶ Ver en YouTube</a>
                 </div>
             </div>
 
             <!-- Plantilla 2 -->
             <div class="template-card">
-                <div class="template-img">[ Imagen 800x500px ]</div>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/F_p624lrh1g?si=2TRYUJhviqyFTvWt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
                 <div class="template-info">
                     <h3>Plantilla de Inventario y Stock</h3>
-                    <p>Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Ideal para control de entradas, salidas y alertas de stock bajo.</p>
-                    <a href="https://www.youtube.com" target="_blank" rel="noopener" class="btn-video">▶ Ver Video</a>
+                    <p>Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa ideal para control de stock.</p>
+                    <a href="https://www.youtube.com/@emprendeconexceloficial" target="_blank" rel="noopener" class="btn-video">▶ Ver en YouTube</a>
                 </div>
             </div>
 
             <!-- Plantilla 3 -->
             <div class="template-card">
-                <div class="template-img">[ Imagen 800x500px ]</div>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/gAn3idAu2Zs?si=T1dKSVEwaAuKaN0e" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
                 <div class="template-info">
                     <h3>Plantilla de Gestión de Proyectos</h3>
-                    <p>Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Seguimiento de tareas y cronogramas.</p>
-                    <a href="https://www.youtube.com" target="_blank" rel="noopener" class="btn-video">▶ Ver Video</a>
+                    <p>Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra.</p>
+                    <a href="https://www.youtube.com/@emprendeconexceloficial" target="_blank" rel="noopener" class="btn-video">▶ Ver en YouTube</a>
+                </div>
+            </div>
+            
+            <!-- Plantilla 4 -->
+            <div class="template-card">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/lHVFafB3CTY?si=8kWfTofxAC29qyA1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="template-info">
+                    <h3>Plantilla de Facturación y Ventas</h3>
+                    <p>Optimiza el registro de tus clientes, emisión de recibos y control de ingresos diarios con fórmulas automatizadas.</p>
+                    <a href="https://www.youtube.com/@emprendeconexceloficial" target="_blank" rel="noopener" class="btn-video">▶ Ver en YouTube</a>
+                </div>
+            </div>
+            
+            <!-- Plantilla 5 -->
+            <div class="template-card">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/YtoFOfJpfcI?si=v-JbZOjr0lfKzN7R" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="template-info">
+                    <h3>Plantilla de Nómina y RRHH</h3>
+                    <p>Controla asistencias, cálculo de sueldos, deducciones y bonos de forma rápida y sin errores de cálculo.</p>
+                    <a href="https://www.youtube.com/@emprendeconexceloficial" target="_blank" rel="noopener" class="btn-video">▶ Ver en YouTube</a>
+                </div>
+            </div>
+            
+            <!-- Plantilla 6 -->
+            <div class="template-card">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/hsJrjLZwSYo?si=Rz4nXhZiFqNSyCtD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="template-info">
+                    <h3>Plantilla de Dashboard Gerencial</h3>
+                    <p>Paneles visuales interactivos con gráficos dinámicos para la toma de decisiones empresariales basadas en datos.</p>
+                    <a href="https://www.youtube.com/@emprendeconexceloficial" target="_blank" rel="noopener" class="btn-video">▶ Ver en YouTube</a>
                 </div>
             </div>
         </div>
 
-        <!-- 1. NUEVA SECCIÓN: TESTIMONIOS (Antes de YouTube) -->
+        <!-- SECCIÓN: TESTIMONIOS -->
         <div id="testimonios" class="testimonials-section">
             <h2>Lo que dicen nuestros clientes</h2>
             <div class="testimonials-grid">
@@ -831,8 +887,7 @@
             </div>
         </div>
 
-        <!-- 2. NUEVA SECCIÓN: CONTACTO (Después de YouTube) -->
-        <!-- NUEVA SECCIÓN: CONTACTO -->
+        <!-- SECCIÓN: CONTACTO -->
         <div id="contacto-directo" class="contact-section">
             <h2>¿Tienes un proyecto en mente? Contáctanos</h2>
             <p>Estamos listos para ayudarte a optimizar tus hojas de cálculo o desarrollar la herramienta en Excel que tu negocio necesita.</p>
@@ -847,7 +902,7 @@
                     </a>
                 </div>
 
-                <!-- Tarjeta Email (Modificada) -->
+                <!-- Tarjeta Email -->
                 <div class="contact-card">
                     <div class="contact-icon">✉️</div>
                     <h3>Correo Electrónico</h3>
